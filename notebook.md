@@ -167,13 +167,10 @@ the markdown as a notebook!** Maybe if
 more people use it, they
 can try it out.
 As a compromise, I converted to
-notebook-output.pdf for you to
+notebook-output.ipynb for you to
 read online :)
 This was done with 
 `notedown notebook.md > notebook-output.ipynb`
-and 
-`jupyter
-nbconvert --to html notebook-output.ipynb`.
 
 [mdcheat]:
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
