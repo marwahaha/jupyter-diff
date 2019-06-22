@@ -36,20 +36,26 @@ code.
 Ideas can change, and many turn to a form of version control to track
 changes.
 
-![PhD Comics by Jorge Cham][phdcomic]
+![PhD Comics by Jorge Cham](phd101212s.png)
 
-However, the underlying format
+However, the underlying
+format
 of notebooks is
-JSON. It is relatively difficult to see changes to JSON objects
+JSON. It is relatively difficult to see changes to JSON
+objects
 in classic tools
-like [diff](http://man7.org/linux/man-pages/man1/diff.1.html).
+like [diff][diff].
 There is still
-not consensus on how to put Jupyter notebooks in version control.
+not consensus on how
+to put Jupyter
+notebooks in version control.
 See
 [here][j1], 
 [here][j2],
-and [here][j3],
-with varied solutions like
+and
+[here][j3],
+with
+varied solutions like
 [nbdime](https://nbdime.readthedocs.io/en/latest/),
 [nbstripout](https://github.com/kynan/nbstripout), or
 [jupytext](https://github.com/mwouts/jupytext). 
@@ -57,17 +63,12 @@ with varied solutions like
 Here, I will use
 [notedown](https://github.com/aaren/notedown) to work with `.md` files in
 Jupyter Lab, and use [git](https://git-scm.com/) for version control.
-[phdcomic]: https://swcarpentry.github.io/git-novice/fig/phd101212s.png
+[diff]:http://man7.org/linux/man-pages/man1/diff.1.html
+[j1]:https://stackoverflow.com/q/18734739
 
-[j1]:
-https://stackoverflow.com/questions/18734739/using-ipython-notebooks-under-
-version-control
-
-[j2]: https://towardsdatascience.com/version-control-with-
-jupyter-notebooks-f096f4d7035a
-
-[j3]: https://nextjournal.com/schmudde/how-to-
-version-control-jupyter
+[j2]:https://medium.com/p/version-
+control-with-jupyter-notebooks-f096f4d7035a
+[j3]:https://nextjournal.com/schmudde/how-to-version-control-jupyter
 
 ```{.python .input  n=5}
 bool("Markdown") and bool("Jupyter")
@@ -91,10 +92,8 @@ First, boot up Jupyter Lab.
 
 Let's install notedown [directly from the
 notebook][jakevdp]:
-
-[jakevdp]:
-https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-
-jupyter/
+[jakevdp]:https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-
+from-jupyter/
 
 ```{.python .input  n=3}
 import sys
@@ -143,25 +142,34 @@ Notebook`.
 !["Open With" image](open-with.png)
 
 ## Issues
-Not everything is perfect. Here are the issues I've seen:
+Not everything is
+perfect. Here are the issues I've seen:
 1. **Links
-wrap, and occasionally get spaces added to them.** This is from 80-character
-line limits in Markdown format. Some links will be broken because of this. One
-partial solution is to reference links (see examples [here][md-cheat]).
+wrap, and occasionally get
+spaces added to them.** This is from 80-character
+line limits in Markdown
+format. Some links will be broken because of this. One
+partial solution is to
+reference links (see examples [here][mdcheat]).
 
-[md-
-cheat]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-2.
-**Sometimes, Markdown cells get pasted together.** It can be easier to edit
-Markdown cells in smaller chunks. To separate them, I sometimes add little code
+2. **Sometimes, Markdown cells
+get pasted together.** It can be easier to edit
+Markdown cells in smaller
+chunks. To separate them, I sometimes add little code
 snippets.
 
-3. **Github doesn't render the markdown as a notebook!** Maybe if
-more people use it, they can try it out. As a compromise, I converted to
-notebook-output.pdf for you to read online :) This was done with `notedown
-notebook.md > notebook-output.ipynb` and `jupyter nbconvert --to html notebook-
+3. **Github
+doesn't render the markdown as a notebook!** Maybe if
+more people use it, they
+can try it out. As a compromise, I converted to
+notebook-output.pdf for you to
+read online :) This was done with `notedown
+notebook.md > notebook-output.ipynb`
+and `jupyter nbconvert --to html notebook-
 output.ipynb`.
+
+[mdcheat]:
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ```{.python .input  n=26}
 for i in range(3):
