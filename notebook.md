@@ -66,9 +66,8 @@ Jupyter Lab, and use [git](https://git-scm.com/) for version control.
 [diff]:http://man7.org/linux/man-pages/man1/diff.1.html
 [j1]:https://stackoverflow.com/q/18734739
 
-[j2]:https://medium.com/p/version-
-control-with-jupyter-notebooks-f096f4d7035a
-[j3]:https://nextjournal.com/schmudde/how-to-version-control-jupyter
+[j2]:http://tiny.cc/7ofo8y
+[j3]:http://tiny.cc/fofo8y
 
 ```{.python .input  n=5}
 bool("Markdown") and bool("Jupyter")
@@ -92,8 +91,8 @@ First, boot up Jupyter Lab.
 
 Let's install notedown [directly from the
 notebook][jakevdp]:
-[jakevdp]:https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-
-from-jupyter/
+
+[jakevdp]:http://tiny.cc/onfo8y
 
 ```{.python .input  n=3}
 import sys
@@ -151,22 +150,30 @@ line limits in Markdown
 format. Some links will be broken because of this. One
 partial solution is to
 reference links (see examples [here][mdcheat]).
+You can also use URL shortening
+services like http://tiny.cc.
 
 2. **Sometimes, Markdown cells
-get pasted together.** It can be easier to edit
+get pasted
+together.** It can be easier to edit
 Markdown cells in smaller
-chunks. To separate them, I sometimes add little code
+chunks. To
+separate them, I sometimes add little code
 snippets.
 
-3. **Github
-doesn't render the markdown as a notebook!** Maybe if
+3. **GitHub
+doesn't render
+the markdown as a notebook!** Maybe if
 more people use it, they
-can try it out. As a compromise, I converted to
+can try it out.
+As a compromise, I converted to
 notebook-output.pdf for you to
-read online :) This was done with `notedown
-notebook.md > notebook-output.ipynb`
-and `jupyter nbconvert --to html notebook-
-output.ipynb`.
+read online :)
+This was done with 
+`notedown notebook.md > notebook-output.ipynb`
+and 
+`jupyter
+nbconvert --to html notebook-output.ipynb`.
 
 [mdcheat]:
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
