@@ -281,6 +281,16 @@ ax = file.plot(color='blue')
 ]
 ```
 
+## Does it work?
+
+You can decide for yourself. Explore the diffs on GitHub, for
+example [here][1] or [here][2].
+
+In my opinion, this is still a prototype, but a
+cool possibility for using Jupyter and Git together.
+[1]:https://github.com/marwahaha/jupyter-diff/commit/8479a35
+[2]:https://github.com/marwahaha/jupyter-diff/commit/e0faff
+
 ## Thanks!
 
 Check out the latest [Jupyter Lab
