@@ -42,37 +42,30 @@ However, the underlying format
 of notebooks is
 JSON. It is relatively difficult to see changes to JSON objects
 in classic tools
-like [diff][diff].
-
+like [diff](http://man7.org/linux/man-pages/man1/diff.1.html).
 There is still
-not consensus on how to put
-Jupyter notebooks in version control. 
+not consensus on how to put Jupyter notebooks in version control.
 See
 [here][j1], 
-[here][j2], 
-[here][j3],
+[here][j2],
+and [here](https://nextjournal.com/schmudde/how-to-
+version-control-jupyter),
 with varied solutions like
-[nbdime][nbdime],
-[nbstripout][nbstripout], or
-[jupytext][jupytext]. 
+[nbdime](https://nbdime.readthedocs.io/en/latest/),
+[nbstripout](https://github.com/kynan/nbstripout), or
+[jupytext](https://github.com/mwouts/jupytext). 
 
 Here, I will use
 [notedown](https://github.com/aaren/notedown) to work with `.md` files in
 Jupyter Lab, and use [git](https://git-scm.com/) for version control.
 [phdcomic]: https://swcarpentry.github.io/git-novice/fig/phd101212s.png
-[diff]:
-http://man7.org/linux/man-pages/man1/diff.1.html
+
 [j1]:
 https://stackoverflow.com/questions/18734739/using-ipython-notebooks-under-
 version-control
-[j2]: https://nextjournal.com/schmudde/how-to-version-control-
-jupyter
-[j3]: https://towardsdatascience.com/version-control-with-jupyter-
-notebooks-f096f4d7035a
-[nbdime]: https://nbdime.readthedocs.io/en/latest/
-[nbstripout]: https://github.com/kynan/nbstripout
-[jupytext]:
-https://github.com/mwouts/jupytext
+
+[j2]: https://towardsdatascience.com/version-control-with-
+jupyter-notebooks-f096f4d7035a
 
 ```{.python .input  n=5}
 bool("Markdown") and bool("Jupyter")
@@ -150,27 +143,18 @@ Notebook`.
 ## Issues
 Not everything is perfect. Here are the issues I've seen:
 1. **Links
-wrap, and occasionally get spaces added to them.** This makes it harder to click
-Markdown links, because they no longer work. One solution is to reference links
-(see examples [here][md-cheat]).
-2. **Sometimes, Markdown cells get pasted
-together.** It can be easier to edit Markdown cells in smaller chunks. To
-separate them, I sometimes add little code snippets.
-3. **Github doesn't render
-the markdown as a notebook!** Maybe if more people use it, they can try it out.
-As a compromise, I converted to notebook-output.pdf for you to read online :)
-This was done with the below code:
-```
-notedown notebook.md > notebook-
-output.ipynb
-jupyter nbconvert --to html notebook-output.ipynb
-```
-[md-cheat]:
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
-
-```{.python .input}
-
-```
+wrap, and occasionally get spaces added to them.** This is from 80-character
+line limits in Markdown format. Some links will be broken because of this. One
+partial solution is to reference links (see examples [here][md-cheat]).
+2.
+**Sometimes, Markdown cells get pasted together.** It can be easier to edit
+Markdown cells in smaller chunks. To separate them, I sometimes add little code
+snippets.
+3. **Github doesn't render the markdown as a notebook!** Maybe if more
+people use it, they can try it out. As a compromise, I converted to notebook-
+output.pdf for you to read online :) This was done with `notedown notebook.md >
+notebook-output.ipynb` and `jupyter nbconvert --to html notebook-output.ipynb`.
+[md-cheat]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ```{.python .input  n=25}
 for i in range(3):
@@ -188,13 +172,10 @@ for i in range(3):
 ```
 
 ## Sample project
+Let's look at some GeoJSON data in San Francisco.
 
 ## Thanks!
 
 Check out the latest [Jupyter Lab
 interface](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html)
 for working with notebooks in a friendly, responsive way.
-
-```{.python .input}
-
-```
